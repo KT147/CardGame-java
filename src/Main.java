@@ -35,6 +35,7 @@ public class Main {
                 playerOneCards.add(drawn);
 
                 System.out.println("P1 draws: " + drawn);
+                Card.printDeck(cards, "Cards Remaining:");
             }
 
             if (checkIfCardIsValid(playerTwoCards, cardOnTable)) {
@@ -51,13 +52,14 @@ public class Main {
                 playerTwoCards.add(drawn);
 
                 System.out.println("P2 draws: " + drawn);
+                Card.printDeck(cards, "Cards remaining:");
             }
 
             System.out.println("P1 plays: " + p1);
             System.out.println("P2 plays: " + p2);
 
             if (p1 == null && p2 == null && cards.isEmpty()) {
-                System.out.println("No one can play anymore!");
+                System.out.println("Cards remaining");
                 break;
             }
         }
